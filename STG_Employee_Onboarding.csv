@@ -1,0 +1,7 @@
+SSN,ZIP_CODE,EMPLOYEE_NAME
+,Not null,rohit
+Not Null,,1234
+324,Null,satyam
+,5601,akash
+abc,110,4321
+xyz,,rahul
