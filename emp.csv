@@ -1,0 +1,6 @@
+Table_Name,Column_Name,DQ_Rule_Type,DQ Rule Description,Custom SQL,Filler1,Filler2
+STG_Employee_Onboarding,SSN,Not Null,Field cannot be null,,,
+STG_Employee_Onboarding,ZIP_CODE,Not Null,Field cannot be null,,,
+STG_Employee_Onboarding,SSN,Regex,Field should match a pattern,,"^[a-zA-Z.\-_]{1,255}$",
+STG_Employee_Onboarding,EMPLOYEE_NAME,Data Type,Field should be of specific data type,,String,
+STG_Employee_Onboarding,EMPLOYEE_SKILLSET,Custom SQL,Specialty should be part of list of values,Select EMPLOYEE_ID from STG_EMPLOYEE_Onboarding where EMPLOYEE_SKILLSET not in (SELECT VALUE from STG_REFERENCE_TABLE where CATEGORY='SKILLSET'),,
